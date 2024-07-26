@@ -7,9 +7,6 @@ import SigninById from '../../../../components/login/signinById'
 import SigninByQr from '../../../../components/login/signinByQr'
 import styles from './page.module.css'
 
-import KakaoLoginImage from "/public/kakao/kakao_login_medium_narrow.png";
-import naverLoginImage from "/public/naver/btnG_완성형.png";
-
 const Signin = () => {
 
   const KAKAO_REDIRECT_URI = 'http://localhost:3000/oauth/callback/kakao';

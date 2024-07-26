@@ -1,0 +1,47 @@
+.profile {
+  margin: auto;
+  background-color: var(--color-primary);
+  color: var(--color-text);
+  padding: 2rem 0rem 2rem 0rem;
+  text-align: center;
+}
+.profile::after {
+  content: '';
+}
+
+.profile_image {
+  width: 100%;
+  max-height: 600px;
+  align-items: center;
+  object-fit: cover;
+}
+.profile_title {
+  padding: 1rem 0 0 0;
+  font-size: 2rem;
+  font-weight: bold;
+}
+.profile_description {
+  padding: 1rem 0px 1rem 0px;
+  font-size: 2rem;
+  font-weight: bold;
+}
+.profile_github {
+  font-size: 3rem;
+  font-weight: bold;
+}
+.profile_contact {
+  font-size: 1.5rem;
+  display: inline-block;
+  background-color: var(--color-accent);
+  padding: 0.2rem 0.5rem 0.4rem 0.5rem;
+  font-weight: bold;
+  color: var(--color-black);
+  border-radius: 4px;
+  transition: all 300ms ease;
+}
+.profile_contact:hover {
+  background-color: transparent;
+  outline: 2px solid var(--color-accent);
+  color: var(--color-text);
+  transform: scale(1.3);
+}

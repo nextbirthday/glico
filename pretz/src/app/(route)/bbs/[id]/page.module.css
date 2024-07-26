@@ -1,0 +1,43 @@
+.bbs_wrapper {
+    max-width: 1300px;
+    display: grid;
+    margin: 0 auto;
+    grid-template-columns: auto 1fr calc(300px + 0.75rem);
+  }
+  
+  .board_wrap {
+    border-width: 0 1px 1px 1px;
+    border-style: solid;
+    /* border-color: lightgrey; */
+    border-color: #bbb;
+    width: 1000px;
+    min-height: 100vh;
+    margin: 0 auto;
+    padding: 1rem 1rem 1rem 1rem;
+  }
+  .button_warp {
+    padding: 0 0 2rem 0;
+  }
+  .sidebar_wrapper {
+    display: block;
+    width: 295px;
+    padding: 0.7rem 0 0 0.7rem;
+  }
+  
+  .left {
+    margin-right: 1rem;
+  }
+  .channel_icon {
+    width: 4rem;
+    height: 4rem;
+    border-radius: 100%;
+  }
+  
+  .float_left {
+    align-items: center;
+  }
+  
+  .article_list {
+    margin: 0.5rem 0 0.5rem 0;
+  }
+  

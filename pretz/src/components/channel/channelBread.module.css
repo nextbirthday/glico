@@ -1,0 +1,6 @@
+.crumb:hover {
+  background-color: none;
+}
+.ant-breadcrumb a:hover {
+  color: inherit;
+}

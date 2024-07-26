@@ -1,6 +1,12 @@
+/* eslint-disable @next/next/no-sync-scripts */
+import Home from '@/app/(route)/home/page'
 
-export default function Home() {
+const Main = () => {
   return (
-   <div>MAIN</div>
-  );
+    <>
+      <Home />
+    </>
+  )
 }
+
+export default Main

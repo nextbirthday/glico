@@ -41,6 +41,9 @@
         <Logger name="member" level="DEBUG" additivity="false">
             <AppenderRef ref="consoleAppender" />
         </Logger>
+        <Logger name="channel" level="DEBUG" additivity="false">
+            <AppenderRef ref="consoleAppender" />
+        </Logger>
         <Logger name="naver" level="DEBUG" additivity="false">
             <AppenderRef ref="consoleAppender" />
         </Logger>

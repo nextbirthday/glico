@@ -7,11 +7,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-@Log4j2(topic = "youtube")
-@RestController
-@RequestMapping("/youtube/*")
-public class AppResponse {
 
-    @Autowired
-    private YoutubeService youtubeService;
+public class AppResponse {
 }
