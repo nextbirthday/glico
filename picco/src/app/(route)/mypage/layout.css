@@ -1,0 +1,11 @@
+.mypage_wrap {
+  display: flex;
+}
+.mypage_article_left {
+  width: 15%;
+  padding: 0 50px 0 1rem;
+}
+
+.mypage_article_right {
+  width: 85%;
+}

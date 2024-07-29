@@ -1,0 +1,104 @@
+.section {
+  background-color: var(--color-primary);
+  color: var(--color-text);
+  padding: 2rem 0rem 2rem 0rem;
+  text-align: center;
+}
+
+.title {
+  font-size: 2.5rem;
+  padding: 1rem 0rem;
+}
+
+.description {
+  font-weight: 500;
+  font-size: 1.5rem;
+  padding: 0.5rem 0rem;
+}
+.categories {
+  display: flex;
+  justify-content: center;
+  padding: 2rem;
+  gap: 1rem;
+}
+.category {
+  font-size: 1.1rem;
+  padding: 0.5rem 3rem;
+  border-radius: 4px;
+  border: 1px solid black;
+  cursor: pointer;
+  white-space: nowrap;
+}
+.category:hover,
+.category.active {
+  background-color: black;
+  color: white;
+  transition: 200ms ease;
+}
+.category--selected .category__count,
+.category:hover .category__count {
+  opacity: 1;
+  top: 3.8px;
+  right: 12px;
+}
+
+.projects {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 1rem;
+  transition: all 200ms ease-out;
+}
+.projects.anime-out {
+  opacity: 0;
+  transform: scale(0.9) translateY(20px);
+}
+.project {
+  position: relative;
+  overflow: hidden;
+}
+.project__image {
+  width: 460px;
+  height: 360px;
+  object-fit: contain;
+}
+.project__metadata {
+  color: black;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: all 200ms ease-in;
+}
+
+.project__description {
+  margin: 0.5rem 0.5rem 0 0.5rem;
+}
+
+.project__metadata:hover {
+  opacity: 0.8;
+  transform: translateY(0px);
+}
+
+.project__title {
+  font-size: 1.3rem;
+}
+/* 꾸미기용 태그 */
+.project__title::after {
+  /* 내용은 없고 */
+  content: '';
+  display: block;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  margin: 0.1rem 0 0 0;
+  width: 100%; /* project__title 크기에 맞게 */
+  height: 2px;
+  background-color: var(--color-accent);
+}

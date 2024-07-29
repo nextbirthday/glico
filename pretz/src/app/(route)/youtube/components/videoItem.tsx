@@ -3,8 +3,9 @@ import React from 'react'
 import styles from './videoItem.module.css'
 import Link from 'next/link'
 const VideoItem = (props: any) => {
-  const { video, selectVideo } = props
-  console.log(video)
+
+  const { video, selectVideo } = props;
+
   return (
     <Link href={`/watch/${video.id.videoId}`} className={styles.thumbnail_box}>
       <div className={styles.video_item} /* onClick={() => selectVideo(video)} */>
@@ -22,4 +23,4 @@ const VideoItem = (props: any) => {
   )
 }
 
-export default VideoItem
+export default VideoItem;

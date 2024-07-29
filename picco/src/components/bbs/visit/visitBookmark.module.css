@@ -1,0 +1,22 @@
+.visit_bookmark {
+  background-color: #eee;
+  padding: 0.3em;
+  margin: 0;
+  font-size: 0.8rem;
+  font-weight: 600;
+  position: relative;
+  min-height: 20px;
+  margin: 0 auto;
+  margin-bottom: 0.5rem;
+}
+.newvisit_history {
+  padding: 0 0 0 1rem;
+  display: flex;
+}
+.visit_recent {
+  display: flex;
+}
+
+.newvisit_box {
+  padding: 0 0 0 1rem;
+}

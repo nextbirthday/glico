@@ -24,8 +24,9 @@
          mobile,
          email,
          gender,
-         createdAt,
-         updatedAt
+         is_deleted,
+         created_at,
+         updated_at
         )
          VALUES(
          #{userid},
@@ -35,6 +36,7 @@
          #{mobile},
          #{email},
          #{gender},
+         'N',
          CURRENT_TIMESTAMP,
          CURRENT_TIMESTAMP
         )

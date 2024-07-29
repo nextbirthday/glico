@@ -1,0 +1,14 @@
+.select_list_type {
+  width: 5rem;
+  font-size: 0.9rem;
+  padding: 0.17rem 0.3rem;
+  border: 1px solid #ced4da;
+  border-radius: 0;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+.float_left {
+  float: left;
+}
+.float_right {
+  float: right;
+}

@@ -6,7 +6,7 @@ import { useEffect } from 'react';
 const Page = () => {
 
     const searchParams = useSearchParams();
-    const code = searchParams.get("code");
+    let code = searchParams.get("code");
 
     const kakaoLoginHandler = async (code: string) => {
         const res = await axios.post(`/api/oauth/callback/kakao?code=${code}`);

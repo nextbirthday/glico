@@ -1,0 +1,29 @@
+.bbs_wrapper {
+  max-width: 1300px;
+  display: grid;
+  margin: 0 auto;
+  grid-template-columns: auto 1fr calc(300px + 0.75rem);
+}
+.board_wrap {
+  border-width: 0 1px 1px 1px;
+  border-style: solid;
+  /* border-color: lightgrey; */
+  border-color: #bbb;
+  width: 1000px;
+  margin: 0 auto;
+  padding: 1rem 1rem 1rem 1rem;
+}
+
+.private_channel_box {
+  padding: 0.3rem 0 0.3rem 0rem;
+}
+
+.private_link {
+  padding: 0 0 0 0.5rem;
+  color: cornflowerblue;
+}
+
+.sidebar_wrapper {
+  width: 295px;
+  padding: 0.7rem 0 0 0.7rem;
+}

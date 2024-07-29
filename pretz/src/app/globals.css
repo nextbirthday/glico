@@ -8,6 +8,13 @@
   font-family: 'Noto Sans KR', sans-serif;
 }
 
+:root {
+  /* Size */
+  --header--padding--size: 2rem 3rem 2rem 3rem;
+  --footer--padding--size: 2rem 3rem 0rem 3rem;
+  --home--body--padding: 2rem 3rem 2rem 3rem;
+}
+
 body {
     margin: 0;
     padding: 0;

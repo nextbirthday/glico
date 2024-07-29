@@ -31,14 +31,9 @@ const SigninById = () => {
     if (!data) {
       return false;
     }
-
-    console.log("data ===>", data);
-
+    
     const response = await axios.post(process.env.NEXT_PUBLIC_SPRING_IP + 'member/login', data);
     
-    console.log("response ===>" ,response);
-    console.log("response data ===>" ,response.data);
-
   }
 
   const onIpChange = (checked: boolean) => {

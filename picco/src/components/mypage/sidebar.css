@@ -1,0 +1,27 @@
+.mypage_username {
+  font-size: 2rem;
+  font-weight: 500;
+  padding: 0 0 1rem 0;
+}
+
+.my_my {
+  padding: 0.1rem 0 2rem 0;
+}
+
+.heart_text,
+.heart_count {
+  font-weight: 500;
+  font-size: 1.1rem;
+}
+
+.menu_title {
+  padding: 0.5rem 0 0.5rem 0;
+  margin: 0;
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.account_menu_item,
+.cs_menu_item {
+  padding: 0.5rem 0 0.5rem 0;
+}

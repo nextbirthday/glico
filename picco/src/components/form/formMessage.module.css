@@ -1,0 +1,16 @@
+.alert {
+  color: tomato;
+  position: relative;
+  inset: 0.1em 0 0 0.1rem;
+  font-weight: 500;
+  font-size: 0.8em;
+}
+.messageContainer {
+  display: flex;
+  align-items: center;
+}
+
+.icon {
+  color: tomato;
+  padding-right: 4px; /* Adjust the margin as needed */
+}

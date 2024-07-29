@@ -19,5 +19,6 @@ public class Member {
     private String mobile;
     private String email;
     private String gender;
+    private String isDeleted;
 
 }

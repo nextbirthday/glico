@@ -1,17 +1,14 @@
 /* eslint-disable @next/next/no-async-client-component */
 /* eslint-disable @next/next/no-img-element */
 'use client'
-import DefaultLayer from '@/components/layer/defaultLayer'
-import ChangePhoto from '@/components/mypage/edit/changePhoto'
-import DefaultPopupPanel from '@/components/panels/dafaultPopupPanel'
-import ChangeEmail from '@/useClient/mypage/edit/changeEmail'
-import ChangeMobile from '@/useClient/mypage/edit/changeMobile'
-import ChangeName from '@/useClient/mypage/edit/changeName'
-import ChangePassword from '@/useClient/mypage/edit/changePassword'
+import Link from 'next/link'
+import Image from 'next/image'
+import DefalutLayer from '@/components/layer/defaultLayer';
+import DefaultPopupPanel from '@/components/panel/dafaultPopupPanel'
+import ChangePhoto from '@/components/mypage/edit/changePhoto';
+
 import { Divider, Spin, Switch } from 'antd'
 import { useSession } from 'next-auth/react'
-import Image from 'next/image'
-import Link from 'next/link'
 import { useState } from 'react'
 import { FaRegUser } from 'react-icons/fa'
 import { CiMobile3, CiViewList, CiLink } from 'react-icons/ci'
@@ -21,51 +18,62 @@ import { SiAuthelia } from 'react-icons/si'
 import { IoIosLogIn } from 'react-icons/io'
 import { IoEarthOutline } from 'react-icons/io5'
 import styles from './edituser.module.css'
+import DefaultLayer from '@/components/layer/defaultLayer';
+import ChangeName from '@/components/mypage/edit/changeName';
+import ChangeMobile from '@/components/mypage/edit/changeMobile';
+import ChangeEmail from '@/components/mypage/edit/changeEmail';
+import ChangePassword from '@/components/mypage/edit/changePassword';
 
 /* 회원정보수정 */
 const EditUser = () => {
-  const { data } = useSession()
-  console.log('data', data)
-  const [layerType, setLayerType] = useState('')
-  const [layerPopupOpen, setLayerPopupOpen] = useState(false)
+
+  const { data } = useSession();
+
+  const [layerType, setLayerType] = useState('');
+  const [layerPopupOpen, setLayerPopupOpen] = useState(false);
 
   const changeName = () => {
     setLayerType('changeName')
     setLayerPopupOpen(true)
   }
+
   const changeMobile = () => {
     setLayerType('changeMobile')
     setLayerPopupOpen(true)
   }
+
   const changeEmail = () => {
     setLayerType('changeEmail')
     setLayerPopupOpen(true)
   }
+
   const changePassword = () => {
     setLayerType('changePassword')
     setLayerPopupOpen(true)
   }
+
   const changePhoto = () => {
     setLayerType('changePhoto')
     setLayerPopupOpen(true)
   }
+
   const onOverseaChange = () => {}
 
   const onLocationChange = () => {}
 
-  /* 솔루션 INSERT pop-up close */
   const handlePopupClose = () => {
     setLayerPopupOpen(false)
     //location.reload()
   }
-  if (!data)
+
+/*   if (!data)
     return (
       <>
         <Spin tip="Loading" size="large">
           <div className="content" />
         </Spin>
       </>
-    )
+    ) */
   return (
     <>
       <section className={styles.edit_header}>
@@ -277,6 +285,7 @@ const EditUser = () => {
           </div>
         </section>
       </div>
+     
       {layerPopupOpen && (
         <DefaultLayer open={layerPopupOpen}>
           <DefaultPopupPanel
@@ -294,6 +303,7 @@ const EditUser = () => {
           </DefaultPopupPanel>
         </DefaultLayer>
       )}
+      
     </>
   )
 }

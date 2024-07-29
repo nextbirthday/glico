@@ -1,0 +1,144 @@
+.footer {
+  padding: var(--footer--padding--size);
+}
+/* footer 상단부 */
+.cs_section {
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  box-sizing: border-box;
+  flex-direction: column;
+  padding-bottom: 8px;
+}
+
+.info_description {
+  color: #5d5d5d;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 16.32px;
+}
+.info_title {
+  color: #000;
+  font-size: 1.1rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 22.5px;
+}
+.cs_button_box {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+.button_faq {
+  position: relative;
+  padding: 0.3rem 0 0 1rem;
+  border-radius: 2px;
+  background: #303033;
+  font-size: 1rem;
+  color: #fff;
+  line-height: 30px;
+  width: 120px;
+  height: 40px;
+  box-sizing: border-box;
+  border: none;
+}
+.button_faq_arrow {
+  position: absolute;
+  top: 30%;
+  right: 20px;
+  width: 4px;
+}
+.button_qna {
+  position: relative;
+  padding: 0.3rem 0 0 1rem;
+  border-radius: 2px;
+  background: #303033;
+  font-size: 1rem;
+  color: #fff;
+  line-height: 30px;
+  width: 120px;
+  height: 40px;
+  box-sizing: border-box;
+  border: none;
+  margin-left: 4px;
+}
+.button_qna_arrow {
+  position: absolute;
+  top: 30%;
+  right: 20px;
+  width: 4px;
+}
+
+.footer_half {
+  min-height: 160px;
+  padding: 0.5rem 0 0.5rem 0;
+  border-top: 1px solid #e4e4e4;
+  display: flex;
+  margin-top: 0.5rem;
+}
+
+.notice_section {
+  width: 60%;
+  padding: 0 20px 0 0;
+}
+.notice_title {
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+.menu_section {
+  width: 40%;
+}
+
+.menu_list {
+  margin: 0;
+  display: flex;
+}
+
+.menu_item {
+  padding: 0 2rem 0 0;
+}
+.menu_title {
+  font-size: 1rem;
+  font-weight: 600;
+  padding: 0 0.5rem 0 0.5rem;
+}
+.footer_info {
+  padding-top: 0.5rem;
+  padding-right: 200px;
+  border-top: 1px solid #e4e4e4;
+}
+
+.documentation_privacy {
+  padding-right: 5px;
+  font-weight: bold;
+}
+.documentation_terms {
+  border-left: 2px solid lightgray;
+  padding-left: 5px;
+}
+
+.footer_corp {
+  padding: 0.5rem 0 0 0;
+}
+
+.footer_social_list {
+  display: flex;
+}
+.footer_social_item {
+}
+
+/* Target specific items and remove padding-right */
+.footer_social_item.instagram,
+.footer_social_item.youtube,
+.footer_social_item.apple {
+  padding-right: 1rem;
+}
+.social_image {
+  object-fit: fill;
+  width: 2rem;
+  height: 2rem;
+}

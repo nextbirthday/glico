@@ -1,0 +1,17 @@
+.youtube_header {
+  text-align: end;
+}
+
+.search_input {
+  padding: 0.5rem 0 2rem 0;
+  text-align: end;
+}
+
+.youtube_icon {
+  font-size: 2rem;
+  padding: 0 0.5rem 0 0;
+}
+
+.youtube_title {
+  font-size: 2rem;
+}

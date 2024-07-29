@@ -1,0 +1,33 @@
+.default_popup_wrap {
+  min-width: 330px;
+  min-height: 40vh;
+  border-radius: 1rem;
+  animation: showFade 0.5s;
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+}
+
+@keyframes showFade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.title_wrap h1 {
+  font-weight: bold;
+  font-size: 1.2em;
+}
+.title_wrap span {
+  cursor: pointer;
+  font-size: 1.3em;
+}
+
+.wrap > article {
+  padding: 2rem;
+  /* max-height: 60vh; */
+  overflow: auto;
+}

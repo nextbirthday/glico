@@ -1,0 +1,11 @@
+.reconfirm_section {
+  border-bottom: 4px solid #000;
+}
+.reconfirm_title {
+  font-size: 1.5rem;
+  font-weight: 400;
+}
+.reconfirm_description {
+  font-size: 1rem;
+  font-weight: 400;
+}

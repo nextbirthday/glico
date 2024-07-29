@@ -7,7 +7,7 @@ import lombok.Setter;
 @Setter
 public class Channel {
 
-    private Long id;
-    private String name;
-    private String slug;
+    private Long channel_id;
+    private String channel_title;
+    private String channel_slug;
 }

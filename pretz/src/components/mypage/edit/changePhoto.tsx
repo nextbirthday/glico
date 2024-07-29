@@ -22,6 +22,7 @@ const ChangePhoto = ({ handlePopupClose }: any) => {
   const handleCancel = () => setPreviewOpen(false)
 
   const handlePreview = async (file: UploadFile) => {
+    
     if (!file.url && !file.preview) {
       file.preview = await getBase64(file.originFileObj as RcFile)
     }
@@ -39,6 +40,7 @@ const ChangePhoto = ({ handlePopupClose }: any) => {
       <div style={{ marginTop: 8 }}>사진변경</div>
     </div>
   )
+
   return (
     <>
       <div className={styles.profile_area}>
