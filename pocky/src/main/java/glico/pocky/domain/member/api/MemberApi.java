@@ -6,6 +6,7 @@ import glico.pocky.domain.member.dto.SignupRequest;
 import lombok.extern.log4j.Log4j2;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.servlet.ModelAndView;
 
 import java.util.List;
 
@@ -21,6 +22,17 @@ public class MemberApi {
     @Autowired
     public MemberApi(MemberService memberService) {
         this.memberService = memberService;
+    }
+
+    @GetMapping (value = "")
+    public ModelAndView member() {
+        ModelAndView modelAndView = new ModelAndView();
+        List<Member> memberList = memberService.getMemberList();
+
+        modelAndView.addObject("memberList", memberList);
+        modelAndView.setViewName("pages/member/memberList");
+
+        return modelAndView;
     }
 
     @GetMapping (value = "/list")

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div>memberList!!!</div>
+<div>memberList!!!</div>
+<div>memberList!!!</div>
+<div>memberList!!!</div>
+<div>memberList!!!</div>
+<ul>
+    <li th:each="member : ${memberList}">
+        <span th:text="${member.userid}">USERID</span> -
+        <span th:text="${member.name}">NAME</span>
+    </li>
+</ul>
+</body>
+</html>

@@ -11,13 +11,13 @@ public class AppApi {
     public String index(){
 
         log.info("asd");
-        return "/view/home/home";
+        return "pages/home/home";
     }
 
-    @GetMapping("/channelList")
-    public String channelList(){
+    @GetMapping("/channel")
+    public String channel(){
 
         log.info("asd");
-        return "/view/channel/channelList";
+        return "pages/channel/channel";
     }
 }
