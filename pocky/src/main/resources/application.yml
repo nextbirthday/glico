@@ -11,14 +11,14 @@ server:
 spring:
    thymeleaf:
       check-template-location: true
-      prefix: classpath:templates/
+      prefix: classpath:/templates/
       suffix: .html
       cache: false #default true, dev mode false
-      view-names: thymeleaf/*
-   mvc:
-     view:
-       prefix: /WEB-INF/
-       suffix: .jsp
+#      view-names: thymeleaf/*
+#   mvc:
+#     view:
+#       prefix: /WEB-INF/
+#       suffix: .jsp
    datasource:
      driver-class-name: com.mysql.cj.jdbc.Driver
      url: ${SPRING_MYSQL_URL}

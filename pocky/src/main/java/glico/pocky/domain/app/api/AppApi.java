@@ -11,6 +11,13 @@ public class AppApi {
     public String index(){
 
         log.info("asd");
-        return "thymeleaf/home";
+        return "/view/home/home";
+    }
+
+    @GetMapping("/channelList")
+    public String channelList(){
+
+        log.info("asd");
+        return "/view/channel/channelList";
     }
 }
