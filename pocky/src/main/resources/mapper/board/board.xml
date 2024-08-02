@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="board">
+
+    <select id="getBoardList" resultType="map">
+    /* board.getBoardList */
+     SELECT B.BOARD_ID AS 'BOARD_ID',
+             B.TITLE AS '게시글제목',
+             B.CONTENT AS '게시글 내용',
+             B.CREATED_AT AS '게시일',
+             M.USERID AS '작성자',
+             C.CHANNEL_TITLE AS '채널 타이틀'
+     FROM BOARD B /* 게시글 */
+     LEFT JOIN GLICO.MEMBER M ON M.ID = B.AUTHOR
+     LEFT JOIN GLICO.CHANNEL C ON C.CHANNEL_ID = B.CHANNEL
+    </select>
+
+</mapper>

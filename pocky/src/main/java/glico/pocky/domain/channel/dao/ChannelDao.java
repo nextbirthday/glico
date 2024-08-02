@@ -8,7 +8,9 @@ import org.springframework.stereotype.Repository;
 @Repository
 @Log4j2 (topic ="channel")
 public class ChannelDao {
+    private final SqlSessionTemplate sqlSessionTemplate;
 
-    @Autowired
-    private SqlSessionTemplate sqlSessionTemplate;
+    public ChannelDao(SqlSessionTemplate sqlSessionTemplate) {
+        this.sqlSessionTemplate = sqlSessionTemplate;
+    }
 }

@@ -7,8 +7,11 @@ import org.springframework.stereotype.Service;
 @Service
 public class ChannelService {
 
-    @Autowired
-    private ChannelDao channelDao;
+    private final ChannelDao channelDao;
 
+    @Autowired
+    public ChannelService(ChannelDao channelDao) {
+        this.channelDao = channelDao;
+    }
 
 }

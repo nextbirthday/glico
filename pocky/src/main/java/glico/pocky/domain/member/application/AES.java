@@ -1,11 +1,13 @@
 package glico.pocky.domain.member.application;
 
 import lombok.extern.log4j.Log4j2;
+import org.springframework.stereotype.Service;
 
 import javax.crypto.Cipher;
 import javax.crypto.spec.SecretKeySpec;
 
 
+@Service
 @Log4j2
 public class AES {
 

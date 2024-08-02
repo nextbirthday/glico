@@ -14,11 +14,6 @@ spring:
       prefix: classpath:/templates/
       suffix: .html
       cache: false #default true, dev mode false
-#      view-names: thymeleaf/*
-#   mvc:
-#     view:
-#       prefix: /WEB-INF/
-#       suffix: .jsp
    datasource:
      driver-class-name: com.mysql.cj.jdbc.Driver
      url: ${SPRING_MYSQL_URL}
@@ -38,7 +33,7 @@ spring:
      enabled: true
 mybatis:
   # Mapper locations
-  mapper-locations: classpath:mapper/**.xml
+  mapper-locations: classpath:mapper/**/*.xml
   configuration:
     map-underscore-to-camel-case: true
 #    location: classpath:mybatis-config.xml

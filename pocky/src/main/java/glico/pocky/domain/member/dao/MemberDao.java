@@ -13,15 +13,15 @@ import java.util.List;
 @Repository
 public class MemberDao {
 
-    @Autowired
-    private SqlSessionTemplate sqlSessionTemplate;
+    private final SqlSessionTemplate sqlSessionTemplate;
+
+    public MemberDao(SqlSessionTemplate sqlSessionTemplate) { this.sqlSessionTemplate = sqlSessionTemplate; }
     public List<Member> getMemberList() {
 
         List<Member> memberList = sqlSessionTemplate.selectList( "member.getMemberList");
 
         return memberList;
     }
-
 
     public int signup(SignupRequest signupRequest) {
 

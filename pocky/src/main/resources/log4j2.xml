@@ -44,6 +44,15 @@
         <Logger name="channel" level="DEBUG" additivity="false">
             <AppenderRef ref="consoleAppender" />
         </Logger>
+        <Logger name="board" level="DEBUG" additivity="false">
+            <AppenderRef ref="consoleAppender" />
+        </Logger>
+        <Logger name="comment" level="DEBUG" additivity="false">
+            <AppenderRef ref="consoleAppender" />
+        </Logger>
+        <Logger name="tag" level="DEBUG" additivity="false">
+            <AppenderRef ref="consoleAppender" />
+        </Logger>
         <Logger name="naver" level="DEBUG" additivity="false">
             <AppenderRef ref="consoleAppender" />
         </Logger>

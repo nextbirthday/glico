@@ -5,8 +5,8 @@ import glico.pocky.domain.member.domain.Member;
 import glico.pocky.domain.member.dto.SignupRequest;
 import lombok.extern.log4j.Log4j2;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
-import org.springframework.web.servlet.ModelAndView;
 
 import java.util.List;
 
@@ -15,8 +15,6 @@ import java.util.List;
 @RequestMapping("/member")
 public class MemberApi {
 
-    // @Autowired
-    // private MemberService memberService;
     private final MemberService memberService;
 
     @Autowired
@@ -24,15 +22,24 @@ public class MemberApi {
         this.memberService = memberService;
     }
 
+//    @GetMapping (value = "")
+//    public ModelAndView member() {
+//        ModelAndView modelAndView = new ModelAndView();
+//        List<Member> memberList = memberService.getMemberList();
+//
+//        modelAndView.addObject("memberList", memberList);
+//        modelAndView.setViewName("pages/member/memberList");
+//
+//        return modelAndView;
+//    }
+
     @GetMapping (value = "")
-    public ModelAndView member() {
-        ModelAndView modelAndView = new ModelAndView();
+    public String member(Model model) {
+        //ModelAndView modelAndView = new ModelAndView();
         List<Member> memberList = memberService.getMemberList();
 
-        modelAndView.addObject("memberList", memberList);
-        modelAndView.setViewName("pages/member/memberList");
-
-        return modelAndView;
+        model.addAttribute("memberList", memberList);
+        return "pages/member/memberList";
     }
 
     @GetMapping (value = "/list")
@@ -54,10 +61,10 @@ public class MemberApi {
     }
 
     @PostMapping(value = "/login")
-    public Member login(@RequestBody Member memberRequest){
+    public int login(@RequestBody Member memberRequest){
 
-        Member member = memberService.memberLogin(memberRequest);
+        int result = memberService.memberLogin(memberRequest);
 
-        return member;
+        return result;
     }
 }
