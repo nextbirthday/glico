@@ -5,7 +5,7 @@
 
     <select id="getMemberList" resultType="glico.pocky.domain.member.domain.Member">
         SELECT *
-        FROM GLICO.MEMBER;
+        FROM GLICO.MEMBER
     </select>
 
     <select id="memberLogin" resultType="glico.pocky.domain.member.domain.Member">

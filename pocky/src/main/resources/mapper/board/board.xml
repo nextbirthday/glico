@@ -16,4 +16,14 @@
      LEFT JOIN GLICO.CHANNEL C ON C.CHANNEL_ID = B.CHANNEL
     </select>
 
+    <insert id="boardInsert">
+
+
+    </insert>
+
+    <update id="boardUpdate">
+
+
+    </update>
+
 </mapper>

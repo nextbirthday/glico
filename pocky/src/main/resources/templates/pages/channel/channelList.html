@@ -22,6 +22,16 @@
             <div>channelList!!!</div>
             <div>channelList!!!</div>
             <div>channelList!!!</div>
+            <ul>
+                <li th:each="channel : ${channelList}">
+                    <p th:text="${channel.channelId}"></p>
+                    <p th:text="${channel.channelSlug}"></p>
+                    <p th:text="${channel.channelTitle}"></p>
+                    <p th:text="${channel.isDeleted}"></p>
+                    <p th:text="${channel.createdAt}"></p>
+                    <p th:text="${channel.updatedAt}"></p>
+                </li>
+            </ul>
         </th:block>
     </div>
 </div>

@@ -11,12 +11,6 @@ import org.springframework.web.servlet.ModelAndView;
 @RestController
 public class HomeApi {
 
-    @GetMapping("/home")
-    public ModelAndView index(@ModelAttribute Member member){
-        ModelAndView modelAndView = new ModelAndView();
 
-        modelAndView.setViewName("pages/home/home");
-        return modelAndView;
-    }
 
 }

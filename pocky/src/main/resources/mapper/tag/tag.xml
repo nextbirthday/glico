@@ -5,7 +5,7 @@
 
     <select id="tagList" resultType="glico.pocky.domain.tag.domain.Tag">
         SELECT *
-        FROM GLICO.TAG;
+        FROM GLICO.TAG
     </select>
 
 

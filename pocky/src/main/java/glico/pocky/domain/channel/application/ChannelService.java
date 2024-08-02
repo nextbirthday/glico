@@ -1,8 +1,11 @@
 package glico.pocky.domain.channel.application;
 
 import glico.pocky.domain.channel.dao.ChannelDao;
+import glico.pocky.domain.channel.domain.Channel;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+
+import java.util.List;
 
 @Service
 public class ChannelService {
@@ -14,4 +17,10 @@ public class ChannelService {
         this.channelDao = channelDao;
     }
 
+    public List<Channel> getChannelList() {
+
+        List<Channel> channelList = channelDao.getChannelList();
+
+        return channelList;
+    }
 }

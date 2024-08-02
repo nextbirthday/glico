@@ -4,8 +4,14 @@
 <mapper namespace="channel">
 
     <select id="getChannelList" resultType="glico.pocky.domain.channel.domain.Channel">
-        SELECT *
-        FROM GLICO.CHANNEL;
+        SELECT
+            CHANNEL_ID,
+            CHANNEL_TITLE,
+            CHANNEL_SLUG,
+            IS_DELETED,
+            DATE_FORMAT(CREATED_AT, '%Y-%m-%d %H:%i:%s') AS CREATED_AT,
+            DATE_FORMAT(UPDATED_AT, '%Y-%m-%d %H:%i:%s') AS UPDATED_AT
+        FROM GLICO.CHANNEL
     </select>
 
 

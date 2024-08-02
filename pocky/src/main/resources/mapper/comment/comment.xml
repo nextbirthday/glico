@@ -5,7 +5,7 @@
 
     <select id="getCommentList" resultType="glico.pocky.domain.comment.domain.Comment">
         SELECT *
-        FROM GLICO.COMMENT;
+        FROM GLICO.COMMENT
     </select>
 
 

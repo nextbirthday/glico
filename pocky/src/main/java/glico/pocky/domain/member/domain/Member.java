@@ -11,6 +11,7 @@ import org.apache.ibatis.type.Alias;
 @Alias("Member")
 public class Member {
 
+    /* map-underscore-to-camel-case: true */
     private Long id;
     private String userid;
     private String password;

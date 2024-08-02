@@ -21,18 +21,28 @@ public class BoardApi {
         this.boardService = boardService;
     }
 
-    /*@GetMapping("/list")
-    public String boardList() {
-        return "pages/channel/channelList";
-    }*/
-
-    @GetMapping (value = "/list")
+    @GetMapping(value = "/list")
     public List<?> list() {
 
         List<?> boardList = boardService.getBoardList();
 
-        log.info("boardList : {}", boardList);
-
         return boardList;
     }
+
+    @GetMapping(value = "/insert")
+    public int boardInsert() {
+
+        int result = boardService.boardInsert();
+
+        return result;
+    }
+
+    @GetMapping(value = "/update")
+    public int boardUpdate() {
+
+        int result = boardService.boardUpdate();
+
+        return result;
+    }
+
 }

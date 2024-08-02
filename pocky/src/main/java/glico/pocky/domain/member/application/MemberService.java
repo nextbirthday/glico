@@ -102,14 +102,15 @@ public class MemberService {
 
     public int memberLogin(Member memberRequest) {
 
+        int result = 0;
+
         Member member = memberDao.memberLogin(memberRequest);
 
         if(member != null && passwordEncoder.matches(memberRequest.getPassword(), member.getPassword())){
-            return 1;
-        }else{
-            return 0;
+           result = 1;
         }
 
+        return  result;
     }
 
 }

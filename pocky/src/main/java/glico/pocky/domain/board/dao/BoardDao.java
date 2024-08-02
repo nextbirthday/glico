@@ -20,4 +20,19 @@ public class BoardDao {
 
         return boardList;
     }
+
+    public int boardInsert() {
+
+        int result = sqlSessionTemplate.insert("board.boardInsert");
+
+        return result;
+    }
+
+    public int boardUpdate() {
+
+        int result = sqlSessionTemplate.update("board.boardUpdate");
+
+        return result;
+
+    }
 }

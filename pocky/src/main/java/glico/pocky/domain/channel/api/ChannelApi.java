@@ -6,8 +6,8 @@ import lombok.extern.log4j.Log4j2;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
-@Log4j2(topic = "channel")
 @RestController
+@Log4j2(topic = "channel")
 @RequestMapping("/channel")
 public class ChannelApi {
     private final ChannelService channelService;
@@ -15,11 +15,6 @@ public class ChannelApi {
     @Autowired
     public ChannelApi(ChannelService channelService) {
         this.channelService = channelService;
-    }
-
-    @GetMapping("/list")
-    public String channelHome() {
-        return "pages/channel/channelList";
     }
 
     @GetMapping(value = "/insert")
@@ -36,6 +31,5 @@ public class ChannelApi {
     public String channelItem(@RequestBody Channel channel) {
         return "channelList";
     }
-
 
 }

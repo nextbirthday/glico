@@ -35,6 +35,11 @@
         <Root level="INFO">
             <AppenderRef ref="consoleAppender" />
         </Root>
+        <!-- Ensure that the logger level is set to DEBUG -->
+        <Logger name="org.apache.ibatis" level="DEBUG" additivity="false">
+            <AppenderRef ref="consoleAppender" />
+            <AppenderRef ref="databaseAppender" />
+        </Logger>
         <Logger name="logger" level="DEBUG" additivity="false">
             <AppenderRef ref="consoleAppender" />
         </Logger>
