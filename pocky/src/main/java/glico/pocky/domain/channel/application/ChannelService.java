@@ -23,4 +23,11 @@ public class ChannelService {
 
         return channelList;
     }
+
+    public Channel getChannelById(String channelId) {
+
+        Channel channel = channelDao.getChannelById(channelId);
+
+        return channel;
+    }
 }

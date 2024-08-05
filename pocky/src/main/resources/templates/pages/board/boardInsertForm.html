@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<html lang="ko"
+      xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{layout/layout}">
+<head>
+    <meta charset="UTF-8">
+    <title>게시글 작성</title>
+</head>
+<body>
+<div class="container">
+    <h2>게시글 작성</h2>
+    <form th:action="@{/board/boardInsert}" th:object="${board}" method="post" class="mt-4">
+
+        <div class="form-group">
+            <label for="channelId">채널 ID</label>
+            <input type="number" th:field="*{channelId}" class="form-control" id="channelId" placeholder="채널 ID 입력">
+        </div>
+
+        <div class="form-group">
+            <label for="authorId">작성자 ID</label>
+            <input type="number" th:field="*{authorId}" class="form-control" id="authorId" placeholder="작성자 ID 입력">
+        </div>
+
+        <div class="form-group">
+            <label for="title">제목</label>
+            <input type="text" th:field="*{title}" class="form-control" id="title" placeholder="제목 입력">
+        </div>
+
+        <div class="form-group">
+            <label for="content">내용</label>
+            <textarea th:field="*{content}" class="form-control" id="content" rows="5" placeholder="내용 입력"></textarea>
+        </div>
+
+        <div class="form-group">
+            <label for="thumbnailUrl">썸네일 URL</label>
+            <input type="text" th:field="*{thumbnailUrl}" class="form-control" id="thumbnailUrl" placeholder="썸네일 URL 입력" value="https://example.com/thumbnail.jpg">
+        </div>
+
+        <button type="submit" class="btn btn-primary">등록</button>
+    </form>
+</div>
+</body>
+</html>

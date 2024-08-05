@@ -23,4 +23,11 @@ public class ChannelDao {
 
         return channelList;
     }
+
+    public Channel getChannelById(String channelId) {
+
+        Channel channel = sqlSessionTemplate.selectOne("channel.getChannelById", channelId);
+
+        return channel;
+    }
 }

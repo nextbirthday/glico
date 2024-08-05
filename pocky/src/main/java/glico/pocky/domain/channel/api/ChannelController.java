@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import java.util.List;
@@ -23,13 +24,23 @@ public class ChannelController {
     }
 
     @GetMapping("")
-    public String channelHome(Model model) {
+    public String showChannelList(Model model) {
 
         List<Channel> channelList = channelService.getChannelList();
 
         model.addAttribute("channelList", channelList);
 
         return "pages/channel/channelList";
+    }
+
+    @GetMapping("/{channelSlug}")
+    public String showChannelItem(@PathVariable("channelSlug") String channelSlug, Model model) {
+
+            Channel channel = channelService.getChannelById(channelSlug);
+
+            model.addAttribute("channel", channel);
+
+            return "pages/channel/channelItem";
     }
 
 }

@@ -9,4 +9,5 @@
     </select>
 
 
+    <insert id="tagInsert" parameterType="glico.pocky.domain.tag.domain.Tag"></insert>
 </mapper>

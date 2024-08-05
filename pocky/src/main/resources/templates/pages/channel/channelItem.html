@@ -11,16 +11,14 @@
 <body>
 <div class="container">
     <div>
+        <!-- content -->
         <th:block layout:fragment="content">
-            <div>channelList!!!</div>
-            <h2>채널 목록</h2>
-            <div class="list-group mt-4">
-                <a th:each="channel : ${channelList}"
-                   th:href="@{/channel/{channelSlug}(channelSlug=${channel.channelSlug})}"
-                   th:text="${channel.channelTitle}">
-                   class="list-group-item list-group-item-action">
-                    채널 이름
-                </a>
+            <h2>채널 상세 정보</h2>
+            <div class="card mt-4">
+                <div class="card-body">
+                    <h1 class="card-title" th:text="${channel.channelTitle}">채널 이름</h1>
+                    <p class="card-text" th:text="${channel.channelSlug}">채널 슬러그</p>
+                </div>
             </div>
         </th:block>
     </div>

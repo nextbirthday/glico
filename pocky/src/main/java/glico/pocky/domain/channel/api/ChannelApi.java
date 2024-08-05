@@ -17,18 +17,13 @@ public class ChannelApi {
         this.channelService = channelService;
     }
 
-    @GetMapping(value = "/insert")
+    @GetMapping(value = "/insertChannel")
     public String channelInsert() {
         return "channelList";
     }
 
-    @GetMapping(value = "/update")
+    @GetMapping(value = "/updateChannel")
     public String channelUpdate() {
-        return "channelList";
-    }
-
-    @PostMapping(value = "/item")
-    public String channelItem(@RequestBody Channel channel) {
         return "channelList";
     }
 
