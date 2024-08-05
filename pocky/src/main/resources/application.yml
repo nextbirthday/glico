@@ -37,7 +37,7 @@ mybatis:
   mapper-locations: classpath:mapper/**/*.xml
   configuration:
     map-underscore-to-camel-case: true
-#    location: classpath:mybatis-config.xml
+    #location: classpath:mybatis-config.xml
 # JPA Configuration (ensure this is properly integrated with your Spring Boot JPA setup)
 jpa:
   database: mysql

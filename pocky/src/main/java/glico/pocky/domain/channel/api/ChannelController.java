@@ -30,6 +30,8 @@ public class ChannelController {
 
         model.addAttribute("channelList", channelList);
 
+        log.info("channelList : {}" , channelList);
+
         return "pages/channel/channelList";
     }
 
@@ -39,6 +41,8 @@ public class ChannelController {
             Channel channel = channelService.getChannelById(channelSlug);
 
             model.addAttribute("channel", channel);
+
+            log.info("channel : {}" , channel);
 
             return "pages/channel/channelItem";
     }

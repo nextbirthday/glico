@@ -3,11 +3,13 @@
       xmlns:th="http://www.thymeleaf.org"
       xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
 <head>
-    <meta charset="utf-8">
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 공통 CSS 파일 -->
+    <link rel="stylesheet" th:href="@{/css/common.css}">
+    <!-- 페이지별 CSS 파일 -->
+    <th:block layout:fragment="css"></th:block>
 </head>
-<!-- config -->
-<th:block th:replace="fragments/config :: config"></th:block>
 
 <body>
 <!-- header -->
@@ -21,6 +23,11 @@
 
 <!-- footer -->
 <th:block th:replace="fragments/footer :: footer"></th:block>
+
+<!-- 공통 JS 파일 -->
+<script th:src="@{/js/common.js}"></script>
+<!-- 페이지별 JS 파일 -->
+<th:block layout:fragment="script"></th:block>
 </div>
 </body>
 </html>

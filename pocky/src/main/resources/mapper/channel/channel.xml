@@ -3,18 +3,61 @@
 
 <mapper namespace="channel">
 
-    <select id="getChannelList" resultType="glico.pocky.domain.channel.domain.Channel">
+    <!-- ChannelResultMap 정의 -->
+    <resultMap id="ChannelResultMap" type="glico.pocky.domain.channel.domain.Channel">
+        <id property="channelId" column="CHANNEL_ID"/>
+        <result property="channelTitle" column="CHANNEL_TITLE"/>
+        <result property="channelSlug" column="CHANNEL_SLUG"/>
+        <result property="isDeleted" column="IS_DELETED"/>
+        <result property="createdAt" column="CREATED_AT"/>
+        <result property="updatedAt" column="UPDATED_AT"/>
+
+        <!-- ChannelDescription 매핑 -->
+        <association property="channelDescription" javaType="glico.pocky.domain.channel.domain.ChannelDescription">
+            <id property="descriptionId" column="DESCRIPTION_ID"/>
+            <result property="descriptionTextFirst" column="DESCRIPTION_TEXT_FIRST"/>
+            <result property="descriptionTextSecond" column="DESCRIPTION_TEXT_SECOND"/>
+            <result property="descriptionTextThird" column="DESCRIPTION_TEXT_THIRD"/>
+            <result property="isDeleted" column="IS_DELETED"/>
+            <result property="createdAt" column="CREATED_AT"/>
+            <result property="updatedAt" column="UPDATED_AT"/>
+        </association>
+    </resultMap>
+
+    <select id="getChannelList" resultMap="ChannelResultMap">
         SELECT
-            CHANNEL_ID,
-            CHANNEL_TITLE,
-            CHANNEL_SLUG,
-            IS_DELETED,
-            DATE_FORMAT(CREATED_AT, '%Y-%m-%d %H:%i:%s') AS CREATED_AT,
-            DATE_FORMAT(UPDATED_AT, '%Y-%m-%d %H:%i:%s') AS UPDATED_AT
-        FROM GLICO.CHANNEL
+            C.CHANNEL_ID,
+            C.CHANNEL_TITLE,
+            C.CHANNEL_SLUG,
+            C.IS_DELETED,
+            DATE_FORMAT(C.CREATED_AT, '%Y-%m-%d %H:%i:%s') AS CREATED_AT,
+            DATE_FORMAT(C.UPDATED_AT, '%Y-%m-%d %H:%i:%s') AS UPDATED_AT,
+            CD.DESCRIPTION_ID,
+            CD.DESCRIPTION_TEXT_FIRST,
+            CD.DESCRIPTION_TEXT_SECOND,
+            CD.DESCRIPTION_TEXT_THIRD
+        FROM GLICO.CHANNEL C
+        LEFT JOIN CHANNEL_DESCRIPTION CD ON C.CHANNEL_ID = CD.CHANNEL_ID
     </select>
 
-    <select id="getChannelById" parameterType="String" resultType="glico.pocky.domain.channel.domain.Channel">
+    <select id="getChannelById" parameterType="String" resultMap="ChannelResultMap">
+        SELECT
+            C.CHANNEL_ID,
+            C.CHANNEL_TITLE,
+            C.CHANNEL_SLUG,
+            C.IS_DELETED,
+            DATE_FORMAT(C.CREATED_AT, '%Y-%m-%d %H:%i:%s') AS CREATED_AT,
+            DATE_FORMAT(C.UPDATED_AT, '%Y-%m-%d %H:%i:%s') AS UPDATED_AT,
+            CD.DESCRIPTION_ID,
+            CD.DESCRIPTION_TEXT_FIRST,
+            CD.DESCRIPTION_TEXT_SECOND,
+            CD.DESCRIPTION_TEXT_THIRD
+        FROM GLICO.CHANNEL C
+                 LEFT JOIN CHANNEL_DESCRIPTION CD ON C.CHANNEL_ID = CD.CHANNEL_ID
+        WHERE C.CHANNEL_SLUG = #{channelSlug}
+    </select>
+
+   <!-- <select id="getChannelById" parameterType="String" resultType="glico.pocky.domain.channel.domain.Channel">
         SELECT
             CHANNEL_ID,
             CHANNEL_TITLE,
@@ -24,6 +67,6 @@
             DATE_FORMAT(UPDATED_AT, '%Y-%m-%d %H:%i:%s') AS UPDATED_AT
         FROM GLICO.CHANNEL
         WHERE CHANNEL_SLUG = #{channelSlug}
-    </select>
+    </select>-->
 
 </mapper>

@@ -6,7 +6,10 @@
       layout:decorate="~{layout/layout}">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>채널 목록</title>
+    <th:block layout:fragment="css">
+        <link rel="stylesheet" th:href="@{/css/channel/channelList.css}">
+    </th:block>
 </head>
 <body>
 <div class="container">
@@ -17,11 +20,20 @@
             <div class="list-group mt-4">
                 <a th:each="channel : ${channelList}"
                    th:href="@{/channel/{channelSlug}(channelSlug=${channel.channelSlug})}"
-                   th:text="${channel.channelTitle}">
-                   class="list-group-item list-group-item-action">
-                    채널 이름
+                   class="list-group-item list-group-item-action channel-item">
+                    <div class="channel-content">
+                        <h5 class="channel-title" th:text="${channel.channelTitle}">채널 이름</h5>
+                        <p class="channel-slug" th:text="${channel.channelSlug}">채널 슬러그</p>
+                        <p class="channel-description" th:text="${channel.channelDescription != null ? (channel.channelDescription.descriptionTextFirst != null ? channel.channelDescription.descriptionTextFirst : '없음') : '없음'}">채널 설명</p>
+                    </div>
                 </a>
             </div>
+
+        </th:block>
+
+        <!-- 페이지별 JS 파일 -->
+        <th:block layout:fragment="script">
+            <script th:src="@{/js/channel/channelList.js}"></script>
         </th:block>
     </div>
 </div>

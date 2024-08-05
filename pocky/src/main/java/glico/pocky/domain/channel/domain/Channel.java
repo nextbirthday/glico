@@ -17,4 +17,6 @@ public class Channel {
     private int isDeleted;
     private String createdAt;
     private String updatedAt;
+
+    private ChannelDescription channelDescription;
 }

@@ -11,14 +11,8 @@
 <!-- typeAliases -->
 <typeAliases>
 
-    <typeAlias type="glico.pocky.domain.member.domain.Member" alias="Member"/>
+    <typeAlias alias="Member" type="glico.pocky.domain.member.domain.Member" />
 
 </typeAliases>
-
-<mappers>
-    <mapper resource="/mapper/member.xml"/>
-</mappers>
-
-
 
 </configuration>

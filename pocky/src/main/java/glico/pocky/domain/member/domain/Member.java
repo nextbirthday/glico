@@ -11,6 +11,7 @@ import org.apache.ibatis.type.Alias;
 @Alias("Member")
 public class Member {
 
+    private Long id;
     private String userid;
     private String password;
     private String name;
@@ -25,6 +26,6 @@ public class Member {
      * map-underscore-to-camel-case: true
      * DB Column name == is_deleted
      */
-    private Long id;
+
 
 }
